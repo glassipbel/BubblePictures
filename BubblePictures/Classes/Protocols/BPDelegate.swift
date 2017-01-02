@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol BPDelegate {
+public protocol BPDelegate {
     func didSelectBubble(at index: Int)
     func didSelectTruncatedBubble()
 }

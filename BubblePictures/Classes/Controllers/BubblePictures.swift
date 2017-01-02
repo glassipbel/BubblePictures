@@ -28,7 +28,7 @@ public class BubblePictures: NSObject {
         NotificationCenter.default.removeObserver(self)
     }
     
-    var delegate: BPDelegate?
+    public var delegate: BPDelegate?
     
     internal func rotated() {
         self.configFilesTruncated = []
