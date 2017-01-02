@@ -1,5 +1,4 @@
 # BubblePictures
-<<<<<<< HEAD
 
 [![CI Status](http://img.shields.io/travis/Kevin Belter/BubblePictures.svg?style=flat)](https://travis-ci.org/Kevin Belter/BubblePictures)
 [![Version](https://img.shields.io/cocoapods/v/BubblePictures.svg?style=flat)](http://cocoapods.org/pods/BubblePictures)
@@ -28,6 +27,4 @@ Kevin Belter, kevin.belter@outlook.com
 ## License
 
 BubblePictures is available under the MIT license. See the LICENSE file for more info.
-=======
-Framework for iOS to show Bubble like pictures.
->>>>>>> 76ac6dc5d6886d506961eaa4819a67251c75639f
+
