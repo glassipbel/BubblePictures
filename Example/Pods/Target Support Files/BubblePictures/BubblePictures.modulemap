@@ -1,0 +1,6 @@
+framework module BubblePictures {
+  umbrella header "BubblePictures-umbrella.h"
+
+  export *
+  module * { export * }
+}

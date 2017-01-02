@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BubblePictures_Example' do
+  pod 'BubblePictures', :path => '../'
+
+  target 'BubblePictures_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
