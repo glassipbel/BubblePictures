@@ -8,9 +8,9 @@
 
 import UIKit
 
-public class BubblePicturesController: NSObject {
+public class BubblePictures: NSObject {
     
-    init(collectionView: UICollectionView, configFiles: [BPCellConfigFile]) {
+    public init(collectionView: UICollectionView, configFiles: [BPCellConfigFile]) {
         self.configFiles = configFiles
         self.collectionView = collectionView
         super.init()
@@ -37,7 +37,7 @@ public class BubblePicturesController: NSObject {
     }
     
     private func registerCells() {
-        let nib = UINib(nibName: BPCollectionViewCell.className, bundle: BubblePicturesController.bubblePicturesBundle)
+        let nib = UINib(nibName: BPCollectionViewCell.className, bundle: BubblePictures.bubblePicturesBundle)
         self.collectionView.register(nib, forCellWithReuseIdentifier: BPCollectionViewCell.className)
     }
     
@@ -80,7 +80,7 @@ public class BubblePicturesController: NSObject {
     }
 }
 
-extension BubblePicturesController: UICollectionViewDataSource {
+extension BubblePictures: UICollectionViewDataSource {
     public func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -99,7 +99,7 @@ extension BubblePicturesController: UICollectionViewDataSource {
     }
 }
 
-extension BubblePicturesController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension BubblePictures: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         return CGSize(width: collectionView.bounds.height, height: collectionView.bounds.height)

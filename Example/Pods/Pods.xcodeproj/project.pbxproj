@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03AF2E7225EFC553E62D22383785E591 /* BubblePicturesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F125643A29D2AB09DBA89B2026EC073D /* BubblePicturesController.swift */; };
+		03AF2E7225EFC553E62D22383785E591 /* BubblePictures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F125643A29D2AB09DBA89B2026EC073D /* BubblePictures.swift */; };
 		05006BDD7301FCF2678618DEDCC69B94 /* UIImage+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39DB47BD984634219C9C33925CBA05 /* UIImage+AlamofireImage.swift */; };
 		08B2002F16AF4F2B980DD58C179E7D86 /* BubblePictures.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 83F939EB700DB9D13AC9D26B7911D50C /* BubblePictures.bundle */; };
 		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D405EB25E558F89B770C9DDDA95FBB8A /* Timeline.swift */; };
@@ -238,7 +238,7 @@
 		EB1A319D3B76A905CE51E619B13FF13A /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		EE20B2CB36FBD99D75BB9533ED8BA010 /* BubblePictures-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BubblePictures-umbrella.h"; sourceTree = "<group>"; };
 		F0C486C924EFCFF4D22D2177F7C8C833 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F125643A29D2AB09DBA89B2026EC073D /* BubblePicturesController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BubblePicturesController.swift; sourceTree = "<group>"; };
+		F125643A29D2AB09DBA89B2026EC073D /* BubblePictures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BubblePictures.swift; sourceTree = "<group>"; };
 		F14FE615D9B69983967EA65F7BB41C8C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		F18DB075B4419F1F555090180B922CE3 /* Pods-BubblePictures_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BubblePictures_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F298FF3DB3C1D42B84A9DA5C2F25CFAE /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
@@ -650,7 +650,7 @@
 		F8D4ABA88F7DB9DAF21AFA707A655972 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F125643A29D2AB09DBA89B2026EC073D /* BubblePicturesController.swift */,
+				F125643A29D2AB09DBA89B2026EC073D /* BubblePictures.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1018,7 +1018,7 @@
 				736719CE8A1CFD14CD69EB44779EB746 /* BPDelegate.swift in Sources */,
 				34398211778F7C86D93C629B1EFC153B /* BPImageType.swift in Sources */,
 				556C4F92D6250F1A33A84BF8A13D7C24 /* BubblePictures-dummy.m in Sources */,
-				03AF2E7225EFC553E62D22383785E591 /* BubblePicturesController.swift in Sources */,
+				03AF2E7225EFC553E62D22383785E591 /* BubblePictures.swift in Sources */,
 				72E1E4C4DA22D93170090F65C374B699 /* ImageExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
