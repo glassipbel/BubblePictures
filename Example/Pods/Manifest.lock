@@ -1,12 +1,9 @@
 PODS:
-  - Alamofire (4.0.1)
+  - Alamofire (4.2.0)
   - AlamofireImage (3.1.0):
     - Alamofire (~> 4.0)
-  - BubblePictures (0.1.0):
-    - Alamofire (= 4.0.1)
+  - BubblePictures (0.1.13):
     - AlamofireImage (= 3.1.0)
-    - FontAwesome.swift
-  - FontAwesome.swift (1.0.0)
 
 DEPENDENCIES:
   - BubblePictures (from `../`)
@@ -16,10 +13,9 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   AlamofireImage: bb8c8351c51cb1633bb6be69b6dbbaff37ce65b7
-  BubblePictures: 6f85fbf74a11977a67ecdef3d428a18da4c6da53
-  FontAwesome.swift: 2d32a3d62195343c2004b7c9043294ed2948553a
+  BubblePictures: 42fcc22f02c91efe5c71986d66399d81eeb7ea0a
 
 PODFILE CHECKSUM: 03dce109f13997fe0e10f9926001ac1dafef3399
 

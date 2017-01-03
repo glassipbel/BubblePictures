@@ -33,7 +33,7 @@ class BPCollectionViewCell: UICollectionViewCell {
         viewBackground.layer.cornerRadius = viewBackground.bounds.height / 2.0
     }
     
-    func configure(configFile: BPCellConfigFile) {
+    func configure(configFile: BPCellConfigFile, layoutConfigurator: BPLayoutConfigurator) {
         self.backgroundColor = UIColor.clear
         
         viewBackground.isHidden = false
@@ -47,13 +47,34 @@ class BPCollectionViewCell: UICollectionViewCell {
                 self.imgBackground.image = UIImage(color: color)
                 self.viewBackground.isHidden = true
         }
-        self.lblName.text = configFile.title
+        configureTitle(fullTitle: configFile.title, maxLenght: layoutConfigurator.maxCharactersForBubbleTitles)
+        configureLayout(layoutConfigurator: layoutConfigurator)
     }
     
-    func configureLayout(layoutConfigurator: BPLayoutConfigurator) {
+    private func configureLayout(layoutConfigurator: BPLayoutConfigurator) {
         viewWhiteBorders.layer.borderColor = layoutConfigurator.colorForBubbleBorders.cgColor
         imgBackground.layer.borderColor = layoutConfigurator.colorForBubbleBorders.cgColor
         lblName.font = layoutConfigurator.fontForBubbleTitles
         lblName.textColor = layoutConfigurator.colorForBubbleTitles
+    }
+    
+    private func configureTitle(fullTitle: String, maxLenght: Int) {
+        var name = ""
+        
+        defer { lblName.text = name.uppercased() }
+        
+        let names = fullTitle.components(separatedBy: " ")
+        
+        if names.count == 1 {
+            guard let uniqueName = names.first?.substring(to: maxLenght) else { return }
+            name = uniqueName
+            return
+        }
+        
+        for (index, truncatedName) in names.enumerated() {
+            if index == maxLenght { return }
+            
+            name = "\(name + truncatedName.substring(to: 1))"
+        }
     }
 }

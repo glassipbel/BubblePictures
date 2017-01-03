@@ -71,11 +71,12 @@ bubblePictures.delegate = self
 
 If you want to config the layout, you must inject in the initializer the layoutConfigurator.
 
-The layoutConfigurator is an struct that has 4 values for the moment:
+The layoutConfigurator is an struct that has these values for the now:
 - backgroundColorForTruncatedBubble: This color is for the background color in case that the bubbles are being truncated because of the space in the screen.
 - fontForBubbleTitles: If you want to use another font you can pass it here for the bubble titles.
 - colorForBubbleBorders: If you have for example a black background below the collectionView you should pass UIColor.black for achieving a good layout.
 - colorForBubbleTitles: This is the color of the bubble titles.
+- maxCharactersForBubbleTitles: This is the max lenght of characters for every bubble title.
 
 So you can create a layoutConfigurator like this:
 
@@ -83,7 +84,8 @@ let layoutConfigurator = BPLayoutConfigurator(
 backgroundColorForTruncatedBubble: UIColor.hex("D75A4A"),
 fontForBubbleTitles: UIFont(name: "HelveticaNeue-Light", size: 17.0)!,
 colorForBubbleBorders: UIColor.white,
-colorForBubbleTitles: UIColor.white)
+colorForBubbleTitles: UIColor.white,
+maxCharactersForBubbleTitles: 3)
 
 and then inject it in the initializer:
 
