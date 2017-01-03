@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'BubblePictures'
-  s.version          = '0.1.8'
+  s.version          = '0.1.9'
   s.summary          = 'Framework for showing bubbles like pictures.'
   s.description      = 'Framework for showing bubbles like pictures inside a collection View, the frameworks handles everything for you, you just need to pass the pictures with the titles and thats it.'
   s.homepage         = 'https://github.com/kbelter/BubblePictures'
