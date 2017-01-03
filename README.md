@@ -4,9 +4,9 @@
 [![License](https://img.shields.io/cocoapods/l/BubblePictures.svg?style=flat)](http://cocoapods.org/pods/BubblePictures)
 [![Platform](https://img.shields.io/cocoapods/p/BubblePictures.svg?style=flat)](http://cocoapods.org/pods/BubblePictures)
 
-![Alt text](/Screenshots/portrait.jpg?raw=true "Portrait Bubble Pictures")
+![Portrait Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/portrait.jpg)
 
-![Alt text](/Screenshots/landscape.jpg?raw=true "Portrait Bubble Pictures")
+![Portrait Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/landscape.jpg)
 
 ## About
 
