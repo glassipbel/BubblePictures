@@ -1,6 +1,5 @@
 # BubblePictures
 
-[![CI Status](http://img.shields.io/travis/Kevin Belter/BubblePictures.svg?style=flat)](https://travis-ci.org/Kevin Belter/BubblePictures)
 [![Version](https://img.shields.io/cocoapods/v/BubblePictures.svg?style=flat)](http://cocoapods.org/pods/BubblePictures)
 [![License](https://img.shields.io/cocoapods/l/BubblePictures.svg?style=flat)](http://cocoapods.org/pods/BubblePictures)
 [![Platform](https://img.shields.io/cocoapods/p/BubblePictures.svg?style=flat)](http://cocoapods.org/pods/BubblePictures)
