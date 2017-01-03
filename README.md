@@ -16,7 +16,7 @@ BubblePictures supports all Screen sizes and orientations.
 And it's super easy to use.
 Feel free to download the example and play with different sizes :P
 If you have questions about it, please contact me at my email.
-Made with love and caffeine :)
+Made with love and caffeine :).
 
 ## Example
 
