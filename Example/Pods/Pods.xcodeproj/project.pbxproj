@@ -42,7 +42,6 @@
 		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA617ABE0F89BA864381575AF9067E9 /* SessionDelegate.swift */; };
 		7D6D45ED760A49BA94888BB3F377D60C /* Pods-BubblePictures_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DF126E12A42148EA3DBDAD4C6F7BEF9 /* Pods-BubblePictures_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5364A602939DF8E5BD91B9573B0A5B32 /* Result.swift */; };
-		86EBE7301E1B1DDA002849E1 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EBE72F1E1B1DDA002849E1 /* ColorExtensions.swift */; };
 		86EBE7331E1B1F17002849E1 /* BPLayoutConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EBE7311E1B1F11002849E1 /* BPLayoutConfigurator.swift */; };
 		86EBE7351E1B20B3002849E1 /* BubblePictures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EBE7341E1B20B3002849E1 /* BubblePictures.swift */; };
 		924834A0D1B87D92D49F4FFCDE559B1D /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF51C309950F9B82E91A8E7F517E6C9 /* Enum.swift */; };
@@ -197,7 +196,6 @@
 		8076CCECAD0D7FE023128589BBD99F96 /* Pods-BubblePictures_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BubblePictures_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		82C9149E054C1B7A0F9F7C53A202283C /* BubblePictures.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BubblePictures.xcconfig; sourceTree = "<group>"; };
 		83F939EB700DB9D13AC9D26B7911D50C /* BubblePictures.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubblePictures.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		86EBE72F1E1B1DDA002849E1 /* ColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		86EBE7311E1B1F11002849E1 /* BPLayoutConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPLayoutConfigurator.swift; sourceTree = "<group>"; };
 		86EBE7341E1B20B3002849E1 /* BubblePictures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubblePictures.swift; sourceTree = "<group>"; };
 		8B1EAE0A987C5F9F72D1923C02352D0D /* Pods-BubblePictures_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BubblePictures_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -588,7 +586,6 @@
 			isa = PBXGroup;
 			children = (
 				DDE087EB7801263A1F72E65C030FED99 /* ImageExtensions.swift */,
-				86EBE72F1E1B1DDA002849E1 /* ColorExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -928,7 +925,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86EBE7301E1B1DDA002849E1 /* ColorExtensions.swift in Sources */,
 				9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */,
 				A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */,
 				F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */,

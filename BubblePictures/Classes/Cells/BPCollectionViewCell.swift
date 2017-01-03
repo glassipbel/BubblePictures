@@ -36,6 +36,8 @@ class BPCollectionViewCell: UICollectionViewCell {
     func configure(configFile: BPCellConfigFile) {
         self.backgroundColor = UIColor.clear
         
+        viewBackground.isHidden = false
+        
         switch configFile.imageType {
             case .image(let image):
                 self.imgBackground.image = image
@@ -43,6 +45,7 @@ class BPCollectionViewCell: UICollectionViewCell {
                 self.imgBackground.setImageWithURLAnimated(url)
             case .color(let color):
                 self.imgBackground.image = UIImage(color: color)
+                self.viewBackground.isHidden = true
         }
         self.lblName.text = configFile.title
     }
