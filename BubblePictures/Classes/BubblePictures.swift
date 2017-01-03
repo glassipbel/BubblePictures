@@ -10,13 +10,12 @@ import UIKit
 
 public class BubblePictures: NSObject {
     
-    public init(collectionView: UICollectionView, configFiles: [BPCellConfigFile]) {
+    public init(collectionView: UICollectionView, configFiles: [BPCellConfigFile], layoutConfigurator: BPLayoutConfigurator = BPLayoutConfigurator()) {
         self.configFiles = configFiles
         self.collectionView = collectionView
+        self.layoutConfigurator = layoutConfigurator
         super.init()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
-        
+        registerForNotifications()
         registerCells()
         truncateCells(configFiles: configFiles)
         
@@ -36,6 +35,10 @@ public class BubblePictures: NSObject {
         self.collectionView.reloadData()
     }
     
+    private func registerForNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+    }
+    
     private func registerCells() {
         let nib = UINib(nibName: BPCollectionViewCell.className, bundle: BubblePictures.bubblePicturesBundle)
         self.collectionView.register(nib, forCellWithReuseIdentifier: BPCollectionViewCell.className)
@@ -50,8 +53,7 @@ public class BubblePictures: NSObject {
         for (index, configFile) in configFiles.enumerated() {
             if index == maxNumberOfBubbles - 1 {
                 let remainingCells = configFiles.count - maxNumberOfBubbles + 1
-                //TODO: The color should be injected.
-                let truncatedCell = BPCellConfigFile(imageType: BPImageType.color(UIColor.red), title: "+\(remainingCells)")
+                let truncatedCell = BPCellConfigFile(imageType: BPImageType.color(layoutConfigurator.backgroundColorForTruncatedBubble), title: "+\(remainingCells)")
                 configFilesTruncated.append(truncatedCell)
                 break
             }
@@ -63,6 +65,7 @@ public class BubblePictures: NSObject {
     fileprivate weak var collectionView: UICollectionView!
     fileprivate var configFiles: [BPCellConfigFile]
     fileprivate var configFilesTruncated: [BPCellConfigFile] = []
+    fileprivate var layoutConfigurator: BPLayoutConfigurator
     fileprivate var negativeInsetWidth: CGFloat {
         return (self.collectionView.bounds.height / 3.0)
     }
@@ -94,6 +97,7 @@ extension BubblePictures: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BPCollectionViewCell.className, for: indexPath) as! BPCollectionViewCell
         
         cell.configure(configFile: configFilesTruncated[indexPath.item])
+        cell.configureLayout(layoutConfigurator: layoutConfigurator)
         cell.layer.zPosition = CGFloat(indexPath.item)
         return cell
     }

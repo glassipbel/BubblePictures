@@ -19,17 +19,14 @@ class BPCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         self.layoutIfNeeded()
         
         viewWhiteBorders.layer.masksToBounds = true
         viewWhiteBorders.layer.cornerRadius = viewWhiteBorders.bounds.height / 2.0
-        viewWhiteBorders.layer.borderColor = UIColor.white.cgColor
         viewWhiteBorders.layer.borderWidth = 4.0
         
         imgBackground.layer.masksToBounds = true
         imgBackground.layer.cornerRadius = imgBackground.bounds.height / 2.0
-        imgBackground.layer.borderColor = UIColor.white.cgColor
         imgBackground.layer.borderWidth = 4.0
         
         viewBackground.layer.masksToBounds = true
@@ -48,5 +45,12 @@ class BPCollectionViewCell: UICollectionViewCell {
                 self.imgBackground.image = UIImage(color: color)
         }
         self.lblName.text = configFile.title
+    }
+    
+    func configureLayout(layoutConfigurator: BPLayoutConfigurator) {
+        viewWhiteBorders.layer.borderColor = layoutConfigurator.colorForBubbleBorders.cgColor
+        imgBackground.layer.borderColor = layoutConfigurator.colorForBubbleBorders.cgColor
+        lblName.font = layoutConfigurator.fontForBubbleTitles
+        lblName.textColor = layoutConfigurator.colorForBubbleTitles
     }
 }

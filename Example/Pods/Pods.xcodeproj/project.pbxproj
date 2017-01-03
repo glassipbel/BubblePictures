@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03AF2E7225EFC553E62D22383785E591 /* BubblePictures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F125643A29D2AB09DBA89B2026EC073D /* BubblePictures.swift */; };
 		05006BDD7301FCF2678618DEDCC69B94 /* UIImage+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39DB47BD984634219C9C33925CBA05 /* UIImage+AlamofireImage.swift */; };
 		08B2002F16AF4F2B980DD58C179E7D86 /* BubblePictures.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 83F939EB700DB9D13AC9D26B7911D50C /* BubblePictures.bundle */; };
 		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D405EB25E558F89B770C9DDDA95FBB8A /* Timeline.swift */; };
@@ -43,6 +42,9 @@
 		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA617ABE0F89BA864381575AF9067E9 /* SessionDelegate.swift */; };
 		7D6D45ED760A49BA94888BB3F377D60C /* Pods-BubblePictures_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DF126E12A42148EA3DBDAD4C6F7BEF9 /* Pods-BubblePictures_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5364A602939DF8E5BD91B9573B0A5B32 /* Result.swift */; };
+		86EBE7301E1B1DDA002849E1 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EBE72F1E1B1DDA002849E1 /* ColorExtensions.swift */; };
+		86EBE7331E1B1F17002849E1 /* BPLayoutConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EBE7311E1B1F11002849E1 /* BPLayoutConfigurator.swift */; };
+		86EBE7351E1B20B3002849E1 /* BubblePictures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EBE7341E1B20B3002849E1 /* BubblePictures.swift */; };
 		924834A0D1B87D92D49F4FFCDE559B1D /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF51C309950F9B82E91A8E7F517E6C9 /* Enum.swift */; };
 		9989C49FBF1D78BA0D51EA61AD0FC4F5 /* BPCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433314876C06BD3DE9A7C83D44C1B7FD /* BPCollectionViewCell.swift */; };
 		9A42850DD67E79B3D6A546EE0F39E13F /* Pods-BubblePictures_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D418EC329EEA43D3EA7F674EABE2E44 /* Pods-BubblePictures_Example-dummy.m */; };
@@ -195,6 +197,9 @@
 		8076CCECAD0D7FE023128589BBD99F96 /* Pods-BubblePictures_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BubblePictures_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		82C9149E054C1B7A0F9F7C53A202283C /* BubblePictures.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BubblePictures.xcconfig; sourceTree = "<group>"; };
 		83F939EB700DB9D13AC9D26B7911D50C /* BubblePictures.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubblePictures.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		86EBE72F1E1B1DDA002849E1 /* ColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		86EBE7311E1B1F11002849E1 /* BPLayoutConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPLayoutConfigurator.swift; sourceTree = "<group>"; };
+		86EBE7341E1B20B3002849E1 /* BubblePictures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubblePictures.swift; sourceTree = "<group>"; };
 		8B1EAE0A987C5F9F72D1923C02352D0D /* Pods-BubblePictures_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BubblePictures_Tests-dummy.m"; sourceTree = "<group>"; };
 		8C3BB811C59AD69D4F342D950C456B74 /* FontAwesome.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FontAwesome.swift-dummy.m"; sourceTree = "<group>"; };
 		8E8E525E98C46926A95DEF033885251D /* UIImageView+AlamofireImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+AlamofireImage.swift"; path = "Source/UIImageView+AlamofireImage.swift"; sourceTree = "<group>"; };
@@ -238,7 +243,6 @@
 		EB1A319D3B76A905CE51E619B13FF13A /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		EE20B2CB36FBD99D75BB9533ED8BA010 /* BubblePictures-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BubblePictures-umbrella.h"; sourceTree = "<group>"; };
 		F0C486C924EFCFF4D22D2177F7C8C833 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F125643A29D2AB09DBA89B2026EC073D /* BubblePictures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BubblePictures.swift; sourceTree = "<group>"; };
 		F14FE615D9B69983967EA65F7BB41C8C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		F18DB075B4419F1F555090180B922CE3 /* Pods-BubblePictures_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BubblePictures_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F298FF3DB3C1D42B84A9DA5C2F25CFAE /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
@@ -584,6 +588,7 @@
 			isa = PBXGroup;
 			children = (
 				DDE087EB7801263A1F72E65C030FED99 /* ImageExtensions.swift */,
+				86EBE72F1E1B1DDA002849E1 /* ColorExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -591,8 +596,8 @@
 		D4329BF2F1E50C035F33C276B3B861C0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				86EBE7341E1B20B3002849E1 /* BubblePictures.swift */,
 				0B2F11BF1C29D3006805FB25B5A3E9E8 /* Cells */,
-				F8D4ABA88F7DB9DAF21AFA707A655972 /* Controllers */,
 				EEF4DC5F9D984C8CE03668B5DEC8F0DF /* Enums */,
 				CECBA365B0DE3BF725DF5AFC168CD5A0 /* Extensions */,
 				6EFC33346D92F96B41DECBDDA3926E89 /* Protocols */,
@@ -613,6 +618,7 @@
 			isa = PBXGroup;
 			children = (
 				99EB1E1C59CEA925888D5E405FAFCDA8 /* BPCellConfigFile.swift */,
+				86EBE7311E1B1F11002849E1 /* BPLayoutConfigurator.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -645,14 +651,6 @@
 				DEFA7295356E4F0D5F80277E261BD4C1 /* FontAwesome.swift */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		F8D4ABA88F7DB9DAF21AFA707A655972 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				F125643A29D2AB09DBA89B2026EC073D /* BubblePictures.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -930,6 +928,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86EBE7301E1B1DDA002849E1 /* ColorExtensions.swift in Sources */,
 				9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */,
 				A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */,
 				F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */,
@@ -1013,12 +1012,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86EBE7331E1B1F17002849E1 /* BPLayoutConfigurator.swift in Sources */,
 				BB575240D03CFE68B3FFB72CB4F77DCC /* BPCellConfigFile.swift in Sources */,
+				86EBE7351E1B20B3002849E1 /* BubblePictures.swift in Sources */,
 				9989C49FBF1D78BA0D51EA61AD0FC4F5 /* BPCollectionViewCell.swift in Sources */,
 				736719CE8A1CFD14CD69EB44779EB746 /* BPDelegate.swift in Sources */,
 				34398211778F7C86D93C629B1EFC153B /* BPImageType.swift in Sources */,
 				556C4F92D6250F1A33A84BF8A13D7C24 /* BubblePictures-dummy.m in Sources */,
-				03AF2E7225EFC553E62D22383785E591 /* BubblePictures.swift in Sources */,
 				72E1E4C4DA22D93170090F65C374B699 /* ImageExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
