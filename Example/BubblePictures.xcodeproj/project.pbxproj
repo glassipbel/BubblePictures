@@ -217,10 +217,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 47UYYKAK2U;
 						LastSwiftMigration = 0810;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 47UYYKAK2U;
 						LastSwiftMigration = 0810;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -495,6 +497,7 @@
 			baseConfigurationReference = 0F6F28680029999A190ACC1C /* Pods-BubblePictures_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 47UYYKAK2U;
 				INFOPLIST_FILE = BubblePictures/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -510,6 +513,7 @@
 			baseConfigurationReference = 6DC727C79824DC6A94D8F8B2 /* Pods-BubblePictures_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 47UYYKAK2U;
 				INFOPLIST_FILE = BubblePictures/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -524,6 +528,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CDF181DBA7455071BB01CEDC /* Pods-BubblePictures_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 47UYYKAK2U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -544,6 +549,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 936A50374312CC59A3045AD5 /* Pods-BubblePictures_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 47UYYKAK2U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

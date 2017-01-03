@@ -14,6 +14,7 @@
 This library is for showing pictures in a nice way, maybe you want to show users that upvoted a post or something like that, in that case BubblePictures is the way to go.
 BubblePictures supports all Screen sizes and orientations.
 And it's super easy to use.
+Feel free to download the example and play with different sizes :P
 If you have questions about it, please contact me at my email.
 Made with love and caffeine :)
 
