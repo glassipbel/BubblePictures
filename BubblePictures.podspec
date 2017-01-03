@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'BubblePictures'
-  s.version          = '0.1.9'
+  s.version          = '0.1.10'
   s.summary          = 'Framework for showing bubbles like pictures.'
   s.description      = 'Framework for showing bubbles like pictures inside a collection View, the frameworks handles everything for you, you just need to pass the pictures with the titles and thats it.'
   s.homepage         = 'https://github.com/kbelter/BubblePictures'
@@ -13,7 +13,5 @@ Pod::Spec.new do |s|
      'BubblePictures' => ['BubblePictures/Assets/**/*']
     }
   s.frameworks = 'UIKit'
-  s.dependency 'Alamofire', '4.0.1'
   s.dependency 'AlamofireImage', '3.1.0'
-  s.dependency 'FontAwesome.swift'
 end
