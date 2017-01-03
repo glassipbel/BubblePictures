@@ -96,7 +96,9 @@ extension BubblePictures: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BPCollectionViewCell.className, for: indexPath) as! BPCollectionViewCell
         
-        cell.configure(configFile: configFilesTruncated[indexPath.item], layoutConfigurator: layoutConfigurator)
+        let truncatedCell = indexPath.item == configFilesTruncated.count - 1 &&
+                            configFilesTruncated.count != configFiles.count
+        cell.configure(configFile: configFilesTruncated[indexPath.item], layoutConfigurator: layoutConfigurator, truncatedCell: truncatedCell)
         cell.layer.zPosition = CGFloat(indexPath.item)
         return cell
     }

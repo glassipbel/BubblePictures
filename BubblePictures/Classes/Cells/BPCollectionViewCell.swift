@@ -33,7 +33,7 @@ class BPCollectionViewCell: UICollectionViewCell {
         viewBackground.layer.cornerRadius = viewBackground.bounds.height / 2.0
     }
     
-    func configure(configFile: BPCellConfigFile, layoutConfigurator: BPLayoutConfigurator) {
+    func configure(configFile: BPCellConfigFile, layoutConfigurator: BPLayoutConfigurator, truncatedCell: Bool) {
         self.backgroundColor = UIColor.clear
         
         viewBackground.isHidden = false
@@ -47,7 +47,7 @@ class BPCollectionViewCell: UICollectionViewCell {
                 self.imgBackground.image = UIImage(color: color)
                 self.viewBackground.isHidden = true
         }
-        configureTitle(fullTitle: configFile.title, maxLenght: layoutConfigurator.maxCharactersForBubbleTitles)
+        configureTitle(fullTitle: configFile.title, maxLenght: layoutConfigurator.maxCharactersForBubbleTitles, truncatedCell: truncatedCell)
         configureLayout(layoutConfigurator: layoutConfigurator)
     }
     
@@ -58,10 +58,14 @@ class BPCollectionViewCell: UICollectionViewCell {
         lblName.textColor = layoutConfigurator.colorForBubbleTitles
     }
     
-    private func configureTitle(fullTitle: String, maxLenght: Int) {
+    private func configureTitle(fullTitle: String, maxLenght: Int, truncatedCell: Bool) {
         var name = ""
-        
         defer { lblName.text = name.uppercased() }
+        
+        if truncatedCell {
+            name = fullTitle
+            return
+        }
         
         let names = fullTitle.components(separatedBy: " ")
         

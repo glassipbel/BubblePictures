@@ -19,10 +19,10 @@ class ViewController: UIViewController {
         let configFiles = getConfigFiles()
         let layoutConfigurator = BPLayoutConfigurator(
             backgroundColorForTruncatedBubble: UIColor.gray,
-            fontForBubbleTitles: UIFont(name: "HelveticaNeue-Light", size: 17.0)!,
+            fontForBubbleTitles: UIFont(name: "HelveticaNeue-Light", size: 16.0)!,
             colorForBubbleBorders: UIColor.white,
             colorForBubbleTitles: UIColor.white,
-            maxCharactersForBubbleTitles: 0)
+            maxCharactersForBubbleTitles: 2)
         
         bubblePictures = BubblePictures(collectionView: collectionView, configFiles: configFiles, layoutConfigurator: layoutConfigurator)
         bubblePictures.delegate = self
