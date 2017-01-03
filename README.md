@@ -5,11 +5,25 @@
 [![License](https://img.shields.io/cocoapods/l/BubblePictures.svg?style=flat)](http://cocoapods.org/pods/BubblePictures)
 [![Platform](https://img.shields.io/cocoapods/p/BubblePictures.svg?style=flat)](http://cocoapods.org/pods/BubblePictures)
 
+![Alt text](/Screenshots/portrait.PNG?raw=true "Portrait Bubble Pictures")
+
+![Alt text](/Screenshots/landscape.PNG?raw=true "Portrait Bubble Pictures")
+
+## About
+
+This library is for showing pictures in a nice way, maybe you want to show users that upvoted a post or something like that, in that case BubblePictures is the way to go.
+BubblePictures supports all Screen sizes and orientations.
+And it's super easy to use.
+If you have questions about it, please contact me at my email.
+Made with love and caffeine :)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+iOS 9.0 or above
 
 ## Installation
 
