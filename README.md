@@ -83,6 +83,7 @@ NEW ONES:
 - widthForBubbleBorders: The border width for the bubbles.
 - bubbleImageContentMode: The content mode for the image in the bubbles.
 - distanceInterBubbles: The distance between each bubble, the default value is the size of the bubble divided by 3.
+- alignment: The alignment of the bubbles, if you want them right or left.
 
 So you can create a layoutConfigurator like this:
 
