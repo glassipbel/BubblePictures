@@ -16,6 +16,8 @@ public struct BPLayoutConfigurator {
     var maxCharactersForBubbleTitles: Int
     var maxNumberOfBubbles: Int?
     var numberForTruncatedCell: Int?
+    var widthForBubbleBorders: CGFloat
+    var bubbleImageContentMode: UIViewContentMode
     
     public init(
         backgroundColorForTruncatedBubble: UIColor = UIColor.gray,
@@ -24,7 +26,9 @@ public struct BPLayoutConfigurator {
         colorForBubbleTitles: UIColor = UIColor.white,
         maxCharactersForBubbleTitles: Int = 3,
         maxNumberOfBubbles: Int? = nil,
-        numberForTruncatedCell: Int? = nil) {
+        numberForTruncatedCell: Int? = nil,
+        widthForBubbleBorders: CGFloat = 1.0,
+        bubbleImageContentMode: UIViewContentMode = .scaleAspectFill) {
         self.backgroundColorForTruncatedBubble = backgroundColorForTruncatedBubble
         self.fontForBubbleTitles = fontForBubbleTitles
         self.colorForBubbleBorders = colorForBubbleBorders
@@ -32,5 +36,7 @@ public struct BPLayoutConfigurator {
         self.maxCharactersForBubbleTitles = maxCharactersForBubbleTitles < 1 ? 1 : maxCharactersForBubbleTitles
         self.maxNumberOfBubbles = maxNumberOfBubbles
         self.numberForTruncatedCell = numberForTruncatedCell
+        self.widthForBubbleBorders = widthForBubbleBorders
+        self.bubbleImageContentMode = bubbleImageContentMode
     }
 }
