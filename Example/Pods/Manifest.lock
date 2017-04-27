@@ -1,5 +1,5 @@
 PODS:
-  - BubblePictures (0.1.16):
+  - BubblePictures (0.1.17):
     - SDWebImage (= 3.8)
   - SDWebImage (3.8.0):
     - SDWebImage/Core (= 3.8.0)
@@ -13,7 +13,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  BubblePictures: 11f406bd0f33bd51a8a1c17c985bb3957b2ce2ea
+  BubblePictures: 6625dcc9beb942b864dbb5f76c5f06be4a079165
   SDWebImage: 7d9fe229266696de91eadf840c77ca15efd4bbd2
 
 PODFILE CHECKSUM: 03dce109f13997fe0e10f9926001ac1dafef3399
