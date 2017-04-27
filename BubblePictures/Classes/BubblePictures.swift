@@ -77,7 +77,7 @@ public class BubblePictures: NSObject {
     fileprivate var configFilesTruncated: [BPCellConfigFile] = []
     fileprivate var layoutConfigurator: BPLayoutConfigurator
     fileprivate var negativeInsetWidth: CGFloat {
-        return (self.collectionView.bounds.height / 3.0)
+        return layoutConfigurator.distanceInterBubbles ?? (self.collectionView.bounds.height / 3.0)
     }
     fileprivate var maxNumberOfBubbles: Int {
         let calculationMaxNumberOfBubbles = Int(floor((self.collectionView.bounds.width - negativeInsetWidth) / (self.collectionView.bounds.height - negativeInsetWidth)))

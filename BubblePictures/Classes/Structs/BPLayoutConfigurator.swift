@@ -18,6 +18,7 @@ public struct BPLayoutConfigurator {
     var numberForTruncatedCell: Int?
     var widthForBubbleBorders: CGFloat
     var bubbleImageContentMode: UIViewContentMode
+    var distanceInterBubbles: CGFloat?
     
     public init(
         backgroundColorForTruncatedBubble: UIColor = UIColor.gray,
@@ -28,7 +29,8 @@ public struct BPLayoutConfigurator {
         maxNumberOfBubbles: Int? = nil,
         numberForTruncatedCell: Int? = nil,
         widthForBubbleBorders: CGFloat = 1.0,
-        bubbleImageContentMode: UIViewContentMode = .scaleAspectFill) {
+        bubbleImageContentMode: UIViewContentMode = .scaleAspectFill,
+        distanceInterBubbles: CGFloat? = nil) {
         self.backgroundColorForTruncatedBubble = backgroundColorForTruncatedBubble
         self.fontForBubbleTitles = fontForBubbleTitles
         self.colorForBubbleBorders = colorForBubbleBorders
@@ -38,5 +40,6 @@ public struct BPLayoutConfigurator {
         self.numberForTruncatedCell = numberForTruncatedCell
         self.widthForBubbleBorders = widthForBubbleBorders
         self.bubbleImageContentMode = bubbleImageContentMode
+        self.distanceInterBubbles = distanceInterBubbles
     }
 }
