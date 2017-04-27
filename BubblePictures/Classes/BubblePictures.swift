@@ -47,13 +47,23 @@ public class BubblePictures: NSObject {
     private func truncateCells(configFiles: [BPCellConfigFile]) {
         if configFiles.count <= maxNumberOfBubbles {
             configFilesTruncated = configFiles
+            if let numberForTruncated = layoutConfigurator.numberForTruncatedCell {
+                let truncatedCell = BPCellConfigFile(
+                    imageType: BPImageType.color(layoutConfigurator.backgroundColorForTruncatedBubble),
+                    title: "+\(numberForTruncated)"
+                )
+                configFilesTruncated.append(truncatedCell)
+            }
             return
         }
         
         for (index, configFile) in configFiles.enumerated() {
             if index == maxNumberOfBubbles - 1 {
                 let remainingCells = configFiles.count - maxNumberOfBubbles + 1
-                let truncatedCell = BPCellConfigFile(imageType: BPImageType.color(layoutConfigurator.backgroundColorForTruncatedBubble), title: "+\(remainingCells)")
+                let truncatedCell = BPCellConfigFile(
+                    imageType: BPImageType.color(layoutConfigurator.backgroundColorForTruncatedBubble),
+                    title: "+\(layoutConfigurator.numberForTruncatedCell ?? remainingCells)"
+                )
                 configFilesTruncated.append(truncatedCell)
                 break
             }
@@ -70,7 +80,11 @@ public class BubblePictures: NSObject {
         return (self.collectionView.bounds.height / 3.0)
     }
     fileprivate var maxNumberOfBubbles: Int {
-        return Int(floor((self.collectionView.bounds.width - negativeInsetWidth) / (self.collectionView.bounds.height - negativeInsetWidth)))
+        let calculationMaxNumberOfBubbles = Int(floor((self.collectionView.bounds.width - negativeInsetWidth) / (self.collectionView.bounds.height - negativeInsetWidth)))
+        guard let maxNumberPreferredByUser = layoutConfigurator.maxNumberOfBubbles else {
+            return calculationMaxNumberOfBubbles
+        }
+        return min(maxNumberPreferredByUser, calculationMaxNumberOfBubbles)
     }
     internal class var bubblePicturesBundle: Bundle? {
         let podBundle = Bundle(for: self)

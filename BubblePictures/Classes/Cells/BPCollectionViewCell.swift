@@ -41,8 +41,10 @@ class BPCollectionViewCell: UICollectionViewCell {
         switch configFile.imageType {
             case .image(let image):
                 self.imgBackground.image = image
+                self.viewBackground.isHidden = configFile.title == ""
             case .URL(let url):
                 self.imgBackground.setImageWithURLAnimated(url)
+                self.viewBackground.isHidden = configFile.title == ""
             case .color(let color):
                 self.imgBackground.image = UIImage(color: color)
                 self.viewBackground.isHidden = true
@@ -60,7 +62,7 @@ class BPCollectionViewCell: UICollectionViewCell {
     
     private func configureTitle(fullTitle: String, maxLenght: Int, truncatedCell: Bool) {
         var name = ""
-        defer { lblName.text = name.uppercased() }
+        defer { lblName.text = name }
         
         if truncatedCell {
             name = fullTitle
