@@ -7,12 +7,12 @@
 //
 
 import Foundation
-import AlamofireImage
+import SDWebImage
 
 extension UIImageView {
     func setImageWithURLAnimated(_ anURL:URL, completitionBlock:(() -> ())? = nil) {
         let image = UIImage(color: UIColor.gray)
-        af_setImage(withURL: anURL, placeholderImage: image) { _ in
+        sd_setImage(with: anURL, placeholderImage: image, options: SDWebImageOptions()) { (_, _, _, _) in
             completitionBlock?()
         }
     }

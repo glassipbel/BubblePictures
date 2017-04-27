@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
      'BubblePictures' => ['BubblePictures/Assets/**/*']
     }
   s.frameworks = 'UIKit'
-  s.dependency 'AlamofireImage', '3.1.0'
+  s.dependency 'SDWebImage', '3.8'
 end

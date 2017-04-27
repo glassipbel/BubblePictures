@@ -1,9 +1,9 @@
 PODS:
-  - Alamofire (4.2.0)
-  - AlamofireImage (3.1.0):
-    - Alamofire (~> 4.0)
-  - BubblePictures (0.1.13):
-    - AlamofireImage (= 3.1.0)
+  - BubblePictures (0.1.16):
+    - SDWebImage (= 3.8)
+  - SDWebImage (3.8.0):
+    - SDWebImage/Core (= 3.8.0)
+  - SDWebImage/Core (3.8.0)
 
 DEPENDENCIES:
   - BubblePictures (from `../`)
@@ -13,9 +13,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
-  AlamofireImage: bb8c8351c51cb1633bb6be69b6dbbaff37ce65b7
-  BubblePictures: 42fcc22f02c91efe5c71986d66399d81eeb7ea0a
+  BubblePictures: 11f406bd0f33bd51a8a1c17c985bb3957b2ce2ea
+  SDWebImage: 7d9fe229266696de91eadf840c77ca15efd4bbd2
 
 PODFILE CHECKSUM: 03dce109f13997fe0e10f9926001ac1dafef3399
 

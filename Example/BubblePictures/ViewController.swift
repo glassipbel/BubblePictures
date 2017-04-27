@@ -23,7 +23,7 @@ class ViewController: UIViewController {
             colorForBubbleBorders: UIColor.white,
             colorForBubbleTitles: UIColor.white,
             maxCharactersForBubbleTitles: 2,
-            maxNumberOfBubbles: 30,
+            maxNumberOfBubbles: 6,
             numberForTruncatedCell: 25)
         
         bubblePictures = BubblePictures(collectionView: collectionView, configFiles: configFiles, layoutConfigurator: layoutConfigurator)
