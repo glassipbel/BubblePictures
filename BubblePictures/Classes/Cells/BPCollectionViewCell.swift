@@ -32,13 +32,13 @@ class BPCollectionViewCell: UICollectionViewCell {
         viewBackground.layer.cornerRadius = viewBackground.bounds.height / 2.0
     }
     
-    func configure(configFile: BPCellConfigFile, layoutConfigurator: BPLayoutConfigurator, truncatedCell: Bool) {
+    func configure(configFile: BPCellConfigFile, layoutConfigurator: BPLayoutConfigurator, isTruncatedCell: Bool) {
         self.backgroundColor = UIColor.clear
         
         viewBackground.isHidden = false
         
         configureImage(imageType: configFile.imageType, title: configFile.title, layoutConfigurator: layoutConfigurator)
-        configureTitle(fullTitle: configFile.title, maxLenght: layoutConfigurator.maxCharactersForBubbleTitles, truncatedCell: truncatedCell)
+        configureTitle(fullTitle: configFile.title, maxLenght: layoutConfigurator.maxCharactersForBubbleTitles, isTruncatedCell: isTruncatedCell)
         configureLayout(layoutConfigurator: layoutConfigurator)
         
         viewWhiteBorders.layer.borderWidth = layoutConfigurator.widthForBubbleBorders
@@ -68,11 +68,11 @@ class BPCollectionViewCell: UICollectionViewCell {
         lblName.textColor = layoutConfigurator.colorForBubbleTitles
     }
     
-    private func configureTitle(fullTitle: String, maxLenght: Int, truncatedCell: Bool) {
+    private func configureTitle(fullTitle: String, maxLenght: Int, isTruncatedCell: Bool) {
         var name = ""
         defer { lblName.text = name }
         
-        if truncatedCell {
+        if isTruncatedCell {
             name = fullTitle
             return
         }

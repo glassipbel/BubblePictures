@@ -15,6 +15,7 @@ public class BubblePictures: NSObject {
         self.collectionView = collectionView
         self.layoutConfigurator = layoutConfigurator
         super.init()
+        setCollectionViewAlignment()
         registerForNotifications()
         registerCells()
         truncateCells(configFiles: configFiles)
@@ -35,6 +36,14 @@ public class BubblePictures: NSObject {
         self.collectionView.reloadData()
     }
     
+    private func setCollectionViewAlignment() {
+        if layoutConfigurator.alignment == .right {
+            collectionView.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
+        } else {
+            collectionView.transform = .identity
+        }
+    }
+    
     private func registerForNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
     }
@@ -45,21 +54,20 @@ public class BubblePictures: NSObject {
     }
     
     private func truncateCells(configFiles: [BPCellConfigFile]) {
-        if configFiles.count <= maxNumberOfBubbles {
-            configFilesTruncated = configFiles
-            if let numberForTruncated = layoutConfigurator.numberForTruncatedCell {
-                let truncatedCell = BPCellConfigFile(
-                    imageType: BPImageType.color(layoutConfigurator.backgroundColorForTruncatedBubble),
-                    title: "+\(numberForTruncated)"
-                )
-                configFilesTruncated.append(truncatedCell)
+        defer {
+            if layoutConfigurator.alignment == .right {
+                configFilesTruncated = configFilesTruncated.reversed()
             }
+        }
+        
+        if configFiles.count < maxNumberOfBubbles {
+            configFilesTruncated = configFiles
             return
         }
         
         for (index, configFile) in configFiles.enumerated() {
-            if index == maxNumberOfBubbles - 1 {
-                let remainingCells = configFiles.count - maxNumberOfBubbles + 1
+            if index + 1 == maxNumberOfBubbles {
+                let remainingCells = (configFiles.count + 1) - maxNumberOfBubbles
                 let truncatedCell = BPCellConfigFile(
                     imageType: BPImageType.color(layoutConfigurator.backgroundColorForTruncatedBubble),
                     title: "+\(layoutConfigurator.numberForTruncatedCell ?? remainingCells)"
@@ -84,7 +92,7 @@ public class BubblePictures: NSObject {
         guard let maxNumberPreferredByUser = layoutConfigurator.maxNumberOfBubbles else {
             return calculationMaxNumberOfBubbles
         }
-        return min(maxNumberPreferredByUser, calculationMaxNumberOfBubbles)
+        return min(maxNumberPreferredByUser + 1, calculationMaxNumberOfBubbles)
     }
     internal class var bubblePicturesBundle: Bundle? {
         let podBundle = Bundle(for: self)
@@ -109,11 +117,22 @@ extension BubblePictures: UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BPCollectionViewCell.className, for: indexPath) as! BPCollectionViewCell
+
+        let isTruncatedCell: Bool
+        if layoutConfigurator.alignment == .right {
+            isTruncatedCell = indexPath.item == 0 && configFiles.count > maxNumberOfBubbles - 1
+        } else {
+            isTruncatedCell = indexPath.item == configFilesTruncated.count - 1 && configFiles.count > maxNumberOfBubbles - 1
+        }
+        cell.configure(configFile: configFilesTruncated[indexPath.item], layoutConfigurator: layoutConfigurator, isTruncatedCell: isTruncatedCell)
         
-        let truncatedCell = indexPath.item == configFilesTruncated.count - 1 &&
-                            configFilesTruncated.count != configFiles.count
-        cell.configure(configFile: configFilesTruncated[indexPath.item], layoutConfigurator: layoutConfigurator, truncatedCell: truncatedCell)
-        cell.layer.zPosition = CGFloat(indexPath.item)
+        if layoutConfigurator.alignment == .right {
+            cell.layer.zPosition = CGFloat(-indexPath.item)
+            cell.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
+        } else {
+            cell.layer.zPosition = CGFloat(indexPath.item)
+            cell.transform = .identity
+        }
         return cell
     }
 }
