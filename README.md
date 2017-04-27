@@ -76,6 +76,12 @@ The layoutConfigurator is an struct that has these values for the now:
 - colorForBubbleBorders: If you have for example a black background below the collectionView you should pass UIColor.black for achieving a good layout.
 - colorForBubbleTitles: This is the color of the bubble titles.
 - maxCharactersForBubbleTitles: This is the max lenght of characters for every bubble title.
+NEW ONES:
+- maxNumberOfBubbles: You can add this property if you want to hardcode the number of bubbles that will be shown. (If the number is larger than the whole screen, then it will show the maximum number of bubbles that fits the screen)
+- numberForTruncatedCell: If you don't want BubblePictures to calculate the number in the truncated cell, then you can assign one yourself.
+- widthForBubbleBorders: The border width for the bubbles.
+- bubbleImageContentMode: The content mode for the image in the bubbles.
+- distanceInterBubbles: The distance between each bubble, the default value is the size of the bubble divided by 3.
 
 So you can create a layoutConfigurator like this:
 
