@@ -61,6 +61,7 @@
             <connections>
                 <outlet property="imgBackground" destination="KQk-B4-Z3g" id="aa6-DN-Fab"/>
                 <outlet property="lblName" destination="uV7-Ht-F79" id="Kaq-4d-azl"/>
+                <outlet property="lblNameCenterXConstraint" destination="KdR-lu-hWx" id="pNf-8L-NL4"/>
                 <outlet property="viewBackground" destination="6mm-zf-oXG" id="u2Z-zM-9f2"/>
                 <outlet property="viewBackgroundWidthConstraint" destination="Kn8-wc-FDT" id="hdt-Vk-vcS"/>
                 <outlet property="viewWhiteBorders" destination="BTn-L0-gGU" id="aeP-9S-S1E"/>

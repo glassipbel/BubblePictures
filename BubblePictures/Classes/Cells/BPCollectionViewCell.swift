@@ -17,6 +17,7 @@ class BPCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var viewBackground: UIView!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var viewBackgroundWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var lblNameCenterXConstraint: NSLayoutConstraint!
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -44,6 +45,7 @@ class BPCollectionViewCell: UICollectionViewCell {
         viewWhiteBorders.layer.borderWidth = layoutConfigurator.widthForBubbleBorders
         imgBackground.layer.borderWidth = layoutConfigurator.widthForBubbleBorders
         viewBackgroundWidthConstraint.constant = layoutConfigurator.widthForBubbleBorders * -2
+        lblNameCenterXConstraint.constant = isTruncatedCell ? -2 : -4
     }
     
     private func configureImage(imageType: BPImageType, title: String, layoutConfigurator: BPLayoutConfigurator) {

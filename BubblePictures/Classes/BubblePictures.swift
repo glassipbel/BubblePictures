@@ -152,10 +152,18 @@ extension BubblePictures: UICollectionViewDelegate, UICollectionViewDelegateFlow
     }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.item == configFilesTruncated.count - 1 && configFilesTruncated.count != configFiles.count {
-            delegate?.didSelectTruncatedBubble()
-            return
+        if layoutConfigurator.alignment == .right {
+            if indexPath.item == 0 && configFilesTruncated.count != configFiles.count {
+                delegate?.didSelectTruncatedBubble()
+                return
+            }
+            delegate?.didSelectBubble(at: configFilesTruncated.count - 1 - indexPath.item)
+        } else {
+            if indexPath.item == configFilesTruncated.count - 1 && configFilesTruncated.count != configFiles.count {
+                delegate?.didSelectTruncatedBubble()
+                return
+            }
+            delegate?.didSelectBubble(at: indexPath.item)
         }
-        delegate?.didSelectBubble(at: indexPath.item)
     }
 }
