@@ -8,6 +8,9 @@
 
 ![Portrait Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/landscape.jpg)
 
+(Screenshot from [Luv.it](http://luv.it) App using Bubble Pictures)
+![Portrait Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/luvit_example.jpg)
+
 ## About
 
 This library is for showing pictures in a nice way, maybe you want to show users that upvoted a post or something like that, in that case BubblePictures is the way to go.
