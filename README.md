@@ -9,7 +9,7 @@
 ![Portrait Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/landscape.jpg)
 
 (Screenshot from [Luv.it](http://luv.it) App using Bubble Pictures)
-![Portrait Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/luvit_example.jpg)
+![Portrait Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/luvit_example.png)
 
 ## About
 
