@@ -1,16 +1,16 @@
-# BubblePictures
+![Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/m1.png)
+
+![Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/m2.png)
+
+![Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/m3.png)
+
+(Pictures from [Luv.it](http://luv.it) App using Bubble Pictures)
+
+*Artist Carlos Nicolas [Kans](http://dribbble.com/kans1001)
 
 [![Version](https://img.shields.io/cocoapods/v/BubblePictures.svg?style=flat)](http://cocoapods.org/pods/BubblePictures)
 [![License](https://img.shields.io/cocoapods/l/BubblePictures.svg?style=flat)](http://cocoapods.org/pods/BubblePictures)
 [![Platform](https://img.shields.io/cocoapods/p/BubblePictures.svg?style=flat)](http://cocoapods.org/pods/BubblePictures)
-
-![Portrait Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/portrait.jpg)
-
-![Portrait Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/landscape.jpg)
-
-(Screenshot from [Luv.it](http://luv.it) App using Bubble Pictures)
-
-![Portrait Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/luvit_example.jpg)
 
 ## About
 
