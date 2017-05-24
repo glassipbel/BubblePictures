@@ -1,6 +1,4 @@
-![Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/m1.png)
-
-![Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/m2.png)
+![Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/m4.png)
 
 ![Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/m3.png)
 
