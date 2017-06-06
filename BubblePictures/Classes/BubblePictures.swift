@@ -153,13 +153,13 @@ extension BubblePictures: UICollectionViewDelegate, UICollectionViewDelegateFlow
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if layoutConfigurator.alignment == .right {
-            if indexPath.item == 0 && configFilesTruncated.count != configFiles.count {
+            if indexPath.item == 0 && configFiles.count > maxNumberOfBubbles - 1 {
                 delegate?.didSelectTruncatedBubble()
                 return
             }
             delegate?.didSelectBubble(at: configFilesTruncated.count - 1 - indexPath.item)
         } else {
-            if indexPath.item == configFilesTruncated.count - 1 && configFilesTruncated.count != configFiles.count {
+            if indexPath.item == configFilesTruncated.count - 1 && configFiles.count > maxNumberOfBubbles - 1 {
                 delegate?.didSelectTruncatedBubble()
                 return
             }
