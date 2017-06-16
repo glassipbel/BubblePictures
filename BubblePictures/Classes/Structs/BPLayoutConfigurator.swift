@@ -19,7 +19,8 @@ public struct BPLayoutConfigurator {
     var widthForBubbleBorders: CGFloat
     var bubbleImageContentMode: UIViewContentMode
     var distanceInterBubbles: CGFloat?
-    var alignment: BPAlignment
+    var direction: BPDirection
+    var centered: Bool
     
     public init(
         backgroundColorForTruncatedBubble: UIColor = UIColor.gray,
@@ -32,7 +33,8 @@ public struct BPLayoutConfigurator {
         widthForBubbleBorders: CGFloat = 1.0,
         bubbleImageContentMode: UIViewContentMode = .scaleAspectFill,
         distanceInterBubbles: CGFloat? = nil,
-        alignment: BPAlignment = .left) {
+        direction: BPDirection = .left,
+        centered: Bool = false) {
         self.backgroundColorForTruncatedBubble = backgroundColorForTruncatedBubble
         self.fontForBubbleTitles = fontForBubbleTitles
         self.colorForBubbleBorders = colorForBubbleBorders
@@ -43,6 +45,7 @@ public struct BPLayoutConfigurator {
         self.widthForBubbleBorders = widthForBubbleBorders
         self.bubbleImageContentMode = bubbleImageContentMode
         self.distanceInterBubbles = distanceInterBubbles
-        self.alignment = alignment
+        self.direction = direction
+        self.centered = centered
     }
 }

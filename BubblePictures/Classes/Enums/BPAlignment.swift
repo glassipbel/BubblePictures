@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum BPAlignment {
+public enum BPDirection {
     case left
     case right
 }

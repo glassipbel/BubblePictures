@@ -37,7 +37,7 @@ public class BubblePictures: NSObject {
     }
     
     private func setCollectionViewAlignment() {
-        if layoutConfigurator.alignment == .right {
+        if layoutConfigurator.direction == .right {
             collectionView.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
         } else {
             collectionView.transform = .identity
@@ -55,7 +55,7 @@ public class BubblePictures: NSObject {
     
     private func truncateCells(configFiles: [BPCellConfigFile]) {
         defer {
-            if layoutConfigurator.alignment == .right {
+            if layoutConfigurator.direction == .right {
                 configFilesTruncated = configFilesTruncated.reversed()
             }
         }
@@ -119,14 +119,14 @@ extension BubblePictures: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BPCollectionViewCell.className, for: indexPath) as! BPCollectionViewCell
 
         let isTruncatedCell: Bool
-        if layoutConfigurator.alignment == .right {
+        if layoutConfigurator.direction == .right {
             isTruncatedCell = indexPath.item == 0 && configFiles.count > maxNumberOfBubbles - 1
         } else {
             isTruncatedCell = indexPath.item == configFilesTruncated.count - 1 && configFiles.count > maxNumberOfBubbles - 1
         }
         cell.configure(configFile: configFilesTruncated[indexPath.item], layoutConfigurator: layoutConfigurator, isTruncatedCell: isTruncatedCell)
         
-        if layoutConfigurator.alignment == .right {
+        if layoutConfigurator.direction == .right {
             cell.layer.zPosition = CGFloat(-indexPath.item)
             cell.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
         } else {
@@ -152,7 +152,7 @@ extension BubblePictures: UICollectionViewDelegate, UICollectionViewDelegateFlow
     }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if layoutConfigurator.alignment == .right {
+        if layoutConfigurator.direction == .right {
             if indexPath.item == 0 && configFiles.count > maxNumberOfBubbles - 1 {
                 delegate?.didSelectTruncatedBubble()
                 return

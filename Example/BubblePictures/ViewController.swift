@@ -24,7 +24,8 @@ class ViewController: UIViewController {
             colorForBubbleTitles: UIColor.white,
             maxCharactersForBubbleTitles: 2,
             maxNumberOfBubbles: 3,
-            alignment: .left)
+            direction: .right,
+            centered: true)
         
         bubblePictures = BubblePictures(collectionView: collectionView, configFiles: configFiles, layoutConfigurator: layoutConfigurator)
         bubblePictures.delegate = self
