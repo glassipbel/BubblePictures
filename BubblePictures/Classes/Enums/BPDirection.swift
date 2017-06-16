@@ -9,6 +9,6 @@
 import Foundation
 
 public enum BPDirection {
-    case left
-    case right
+    case leftToRight
+    case rightToLeft
 }

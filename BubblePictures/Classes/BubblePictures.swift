@@ -43,7 +43,7 @@ public class BubblePictures: NSObject {
     }
     
     private func setCollectionViewAlignment() {
-        if layoutConfigurator.direction == .right {
+        if layoutConfigurator.direction == .rightToLeft {
             collectionView.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
         } else {
             collectionView.transform = .identity
@@ -60,12 +60,6 @@ public class BubblePictures: NSObject {
     }
     
     private func truncateCells(configFiles: [BPCellConfigFile]) {
-        defer {
-            if layoutConfigurator.direction == .right {
-                configFilesTruncated = configFilesTruncated.reversed()
-            }
-        }
-        
         self.configFilesTruncated = []
         if configFiles.count < maxNumberOfBubbles {
             configFilesTruncated = configFiles
@@ -88,13 +82,28 @@ public class BubblePictures: NSObject {
     }
     
     private func checkIfShouldBeCentered() {
-        if !layoutConfigurator.centered { return }
-        
         let bubblesTotalWidth = (CGFloat(min(maxNumberOfBubbles, configFiles.count)) * (self.collectionView.bounds.height - negativeInsetWidth)) + negativeInsetWidth
-        let emptyWidthSpace = (self.collectionView.bounds.width - bubblesTotalWidth) / 2.0
-        if emptyWidthSpace <= 0.0 { return }
+        let emptyWidthSpace = self.collectionView.bounds.width - bubblesTotalWidth
+        if emptyWidthSpace < 0.0 { return }
         
-        self.collectionView.contentInset = UIEdgeInsets(top: 0.0, left: emptyWidthSpace, bottom: 0.0, right: emptyWidthSpace)
+        switch layoutConfigurator.alignment {
+        case .center:
+            self.collectionView.contentInset = UIEdgeInsets(top: 0.0, left: emptyWidthSpace / 2.0, bottom: 0.0, right: emptyWidthSpace / 2.0)
+        case .left:
+            switch layoutConfigurator.direction {
+            case .leftToRight:
+                self.collectionView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: emptyWidthSpace)
+            case .rightToLeft:
+                self.collectionView.contentInset = UIEdgeInsets(top: 0.0, left: emptyWidthSpace, bottom: 0.0, right: 0.0)
+            }
+        case .right:
+            switch layoutConfigurator.direction {
+            case .leftToRight:
+                self.collectionView.contentInset = UIEdgeInsets(top: 0.0, left: emptyWidthSpace, bottom: 0.0, right: 0.0)
+            case .rightToLeft:
+                self.collectionView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: emptyWidthSpace)
+            }
+        }
     }
     
     fileprivate weak var collectionView: UICollectionView!
@@ -135,19 +144,13 @@ extension BubblePictures: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BPCollectionViewCell.className, for: indexPath) as! BPCollectionViewCell
 
-        let isTruncatedCell: Bool
-        if layoutConfigurator.direction == .right {
-            isTruncatedCell = indexPath.item == 0 && configFiles.count > maxNumberOfBubbles - 1
-        } else {
-            isTruncatedCell = indexPath.item == configFilesTruncated.count - 1 && configFiles.count > maxNumberOfBubbles - 1
-        }
+        let isTruncatedCell = indexPath.item == configFilesTruncated.count - 1 && configFiles.count > maxNumberOfBubbles - 1
         cell.configure(configFile: configFilesTruncated[indexPath.item], layoutConfigurator: layoutConfigurator, isTruncatedCell: isTruncatedCell)
+        cell.layer.zPosition = CGFloat(indexPath.item)
         
-        if layoutConfigurator.direction == .right {
-            cell.layer.zPosition = CGFloat(-indexPath.item)
+        if layoutConfigurator.direction == .rightToLeft {
             cell.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
         } else {
-            cell.layer.zPosition = CGFloat(indexPath.item)
             cell.transform = .identity
         }
         return cell
@@ -170,18 +173,10 @@ extension BubblePictures: UICollectionViewDelegate, UICollectionViewDelegateFlow
     }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if layoutConfigurator.direction == .right {
-            if indexPath.item == 0 && configFiles.count > maxNumberOfBubbles - 1 {
-                delegate?.didSelectTruncatedBubble()
-                return
-            }
-            delegate?.didSelectBubble(at: configFilesTruncated.count - 1 - indexPath.item)
-        } else {
-            if indexPath.item == configFilesTruncated.count - 1 && configFiles.count > maxNumberOfBubbles - 1 {
-                delegate?.didSelectTruncatedBubble()
-                return
-            }
-            delegate?.didSelectBubble(at: indexPath.item)
+        if indexPath.item == configFilesTruncated.count - 1 && configFiles.count > maxNumberOfBubbles - 1 {
+            delegate?.didSelectTruncatedBubble()
+            return
         }
+        delegate?.didSelectBubble(at: indexPath.item)
     }
 }
