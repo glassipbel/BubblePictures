@@ -15,11 +15,11 @@ public class BubblePictures: NSObject {
         self.collectionView = collectionView
         self.layoutConfigurator = layoutConfigurator
         super.init()
-        setCollectionViewAlignment()
         registerForNotifications()
         registerCells()
+        setCollectionViewAlignment()
         truncateCells(configFiles: configFiles)
-        
+        checkIfShouldBeCentered()
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
     }
@@ -31,8 +31,14 @@ public class BubblePictures: NSObject {
     public var delegate: BPDelegate?
     
     internal func rotated() {
-        self.configFilesTruncated = []
-        truncateCells(configFiles: configFiles)
+        self.collectionView.delegate = nil
+        self.collectionView.dataSource = nil
+        
+        self.truncateCells(configFiles: configFiles)
+        self.checkIfShouldBeCentered()
+        
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
         self.collectionView.reloadData()
     }
     
@@ -60,6 +66,7 @@ public class BubblePictures: NSObject {
             }
         }
         
+        self.configFilesTruncated = []
         if configFiles.count < maxNumberOfBubbles {
             configFilesTruncated = configFiles
             return
@@ -78,6 +85,16 @@ public class BubblePictures: NSObject {
             
             configFilesTruncated.append(configFile)
         }
+    }
+    
+    private func checkIfShouldBeCentered() {
+        if !layoutConfigurator.centered { return }
+        
+        let bubblesTotalWidth = (CGFloat(min(maxNumberOfBubbles, configFiles.count)) * (self.collectionView.bounds.height - negativeInsetWidth)) + negativeInsetWidth
+        let emptyWidthSpace = (self.collectionView.bounds.width - bubblesTotalWidth) / 2.0
+        if emptyWidthSpace <= 0.0 { return }
+        
+        self.collectionView.contentInset = UIEdgeInsets(top: 0.0, left: emptyWidthSpace, bottom: 0.0, right: emptyWidthSpace)
     }
     
     fileprivate weak var collectionView: UICollectionView!
@@ -135,6 +152,7 @@ extension BubblePictures: UICollectionViewDataSource {
         }
         return cell
     }
+    
 }
 
 extension BubblePictures: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
