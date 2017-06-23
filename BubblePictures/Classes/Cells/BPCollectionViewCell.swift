@@ -43,7 +43,6 @@ class BPCollectionViewCell: UICollectionViewCell {
         configureLayout(layoutConfigurator: layoutConfigurator)
         
         viewWhiteBorders.layer.borderWidth = layoutConfigurator.widthForBubbleBorders
-        imgBackground.layer.borderWidth = layoutConfigurator.widthForBubbleBorders
         viewBackgroundWidthConstraint.constant = layoutConfigurator.widthForBubbleBorders * -2
         lblNameCenterXConstraint.constant = isTruncatedCell ? -2 : -4
     }
@@ -65,7 +64,6 @@ class BPCollectionViewCell: UICollectionViewCell {
     
     private func configureLayout(layoutConfigurator: BPLayoutConfigurator) {
         viewWhiteBorders.layer.borderColor = layoutConfigurator.colorForBubbleBorders.cgColor
-        imgBackground.layer.borderColor = layoutConfigurator.colorForBubbleBorders.cgColor
         lblName.font = layoutConfigurator.fontForBubbleTitles
         lblName.textColor = layoutConfigurator.colorForBubbleTitles
     }
