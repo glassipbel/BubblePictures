@@ -11,6 +11,8 @@ import UIKit
 public class BubblePictures: NSObject {
     
     public init(collectionView: UICollectionView, configFiles: [BPCellConfigFile], layoutConfigurator: BPLayoutConfigurator = BPLayoutConfigurator()) {
+        self.collectionView.dataSource = nil
+        self.collectionView.delegate = nil
         self.configFiles = configFiles
         self.collectionView = collectionView
         self.layoutConfigurator = layoutConfigurator
@@ -19,7 +21,7 @@ public class BubblePictures: NSObject {
         registerCells()
         setCollectionViewAlignment()
         truncateCells(configFiles: configFiles)
-        checkIfShouldBeCentered()
+        assignAlignment()
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
     }
@@ -35,7 +37,7 @@ public class BubblePictures: NSObject {
         self.collectionView.dataSource = nil
         
         self.truncateCells(configFiles: configFiles)
-        self.checkIfShouldBeCentered()
+        self.assignAlignment()
         
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
@@ -81,7 +83,7 @@ public class BubblePictures: NSObject {
         }
     }
     
-    private func checkIfShouldBeCentered() {
+    private func assignAlignment() {
         let bubblesTotalWidth = (CGFloat(min(maxNumberOfBubbles, configFiles.count)) * (self.collectionView.bounds.height - negativeInsetWidth)) + negativeInsetWidth
         let emptyWidthSpace = self.collectionView.bounds.width - bubblesTotalWidth
         if emptyWidthSpace < 0.0 { return }
