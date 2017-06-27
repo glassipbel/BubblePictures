@@ -11,11 +11,11 @@ import UIKit
 public class BubblePictures: NSObject {
     
     public init(collectionView: UICollectionView, configFiles: [BPCellConfigFile], layoutConfigurator: BPLayoutConfigurator = BPLayoutConfigurator()) {
-        self.collectionView.dataSource = nil
-        self.collectionView.delegate = nil
         self.configFiles = configFiles
         self.collectionView = collectionView
         self.layoutConfigurator = layoutConfigurator
+        self.collectionView.dataSource = nil
+        self.collectionView.delegate = nil
         super.init()
         registerForNotifications()
         registerCells()
