@@ -32,7 +32,7 @@ public class BubblePictures: NSObject {
     
     public var delegate: BPDelegate?
     
-    internal func rotated() {
+    @objc internal func rotated() {
         self.collectionView.delegate = nil
         self.collectionView.dataSource = nil
         
