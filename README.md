@@ -6,7 +6,7 @@
 
 (Pictures from [Luv.it](http://luv.it) App using Bubble Pictures)
 
-*Artist Carlos Nicolas [Kans](http://dribbble.com/kans1001)
+*Creator And Main (Unique) Dev Kevin Belter. [Kev](https://www.linkedin.com/in/kevinbelter)
 
 [![Version](https://img.shields.io/cocoapods/v/BubblePictures.svg?style=flat)](http://cocoapods.org/pods/BubblePictures)
 [![License](https://img.shields.io/cocoapods/l/BubblePictures.svg?style=flat)](http://cocoapods.org/pods/BubblePictures)
@@ -105,6 +105,8 @@ bubblePictures = BubblePictures(collectionView: {{YOUR_COLLECTION_VIEW}}, config
 ## Author
 
 Kevin Belter, kevin.belter@outlook.com
+
+*Artist Carlos Nicolas [Kans](http://dribbble.com/kans1001)
 
 ## License
 
