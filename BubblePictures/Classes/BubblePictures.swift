@@ -85,12 +85,13 @@ public class BubblePictures: NSObject {
     
     private func assignAlignment() {
         let bubblesTotalWidth = (CGFloat(min(maxNumberOfBubbles, configFiles.count)) * (self.collectionView.bounds.height - negativeInsetWidth)) + negativeInsetWidth
-        let emptyWidthSpace = self.collectionView.bounds.width - bubblesTotalWidth
+        let emptyWidthSpace = self.collectionView.bounds.width - bubblesTotalWidth - 0.01
+        let emptyWidthSpaceDivided = ((self.collectionView.bounds.width - bubblesTotalWidth) / 2.0) - 0.01
         if emptyWidthSpace < 0.0 { return }
         
         switch layoutConfigurator.alignment {
         case .center:
-            self.collectionView.contentInset = UIEdgeInsets(top: 0.0, left: emptyWidthSpace / 2.0, bottom: 0.0, right: emptyWidthSpace / 2.0)
+            self.collectionView.contentInset = UIEdgeInsets(top: 0.0, left: emptyWidthSpaceDivided, bottom: 0.0, right: emptyWidthSpaceDivided)
         case .left:
             switch layoutConfigurator.direction {
             case .leftToRight:

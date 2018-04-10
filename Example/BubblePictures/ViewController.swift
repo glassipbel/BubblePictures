@@ -23,7 +23,7 @@ class ViewController: UIViewController {
             colorForBubbleBorders: UIColor.white,
             colorForBubbleTitles: UIColor.white,
             maxCharactersForBubbleTitles: 2,
-            maxNumberOfBubbles: 4,
+            maxNumberOfBubbles: 2,
             direction: .leftToRight,
             alignment: .center)
         

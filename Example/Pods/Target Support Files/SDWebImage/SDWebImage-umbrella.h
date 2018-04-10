@@ -10,8 +10,10 @@
 #endif
 #endif
 
+#import "NSButton+WebCache.h"
 #import "NSData+ImageContentType.h"
 #import "NSImage+WebCache.h"
+#import "SDAnimatedImageRep.h"
 #import "SDImageCache.h"
 #import "SDImageCacheConfig.h"
 #import "SDWebImageCoder.h"
@@ -26,6 +28,7 @@
 #import "SDWebImageManager.h"
 #import "SDWebImageOperation.h"
 #import "SDWebImagePrefetcher.h"
+#import "SDWebImageTransition.h"
 #import "UIButton+WebCache.h"
 #import "UIImage+ForceDecode.h"
 #import "UIImage+GIF.h"
