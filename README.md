@@ -6,7 +6,7 @@
 
 (Pictures from [Luv.it](http://luv.it) App using Bubble Pictures)
 
-*Creator Kevin Belter. [Kev](https://www.linkedin.com/in/kevinbelter)
+*Creator [Kevin Belter](https://www.linkedin.com/in/kevinbelter).
 
 [![Version](https://img.shields.io/cocoapods/v/BubblePictures.svg?style=flat)](http://cocoapods.org/pods/BubblePictures)
 [![License](https://img.shields.io/cocoapods/l/BubblePictures.svg?style=flat)](http://cocoapods.org/pods/BubblePictures)
