@@ -14,16 +14,16 @@ public class BubblePictures: NSObject {
         self.configFiles = configFiles
         self.collectionView = collectionView
         self.layoutConfigurator = layoutConfigurator
-        self.collectionView.dataSource = nil
-        self.collectionView.delegate = nil
+        self.collectionView?.dataSource = nil
+        self.collectionView?.delegate = nil
         super.init()
         registerForNotifications()
         registerCells()
         setCollectionViewAlignment()
         truncateCells(configFiles: configFiles)
         assignAlignment()
-        self.collectionView.dataSource = self
-        self.collectionView.delegate = self
+        self.collectionView?.dataSource = self
+        self.collectionView?.delegate = self
     }
     
     deinit {
@@ -33,22 +33,22 @@ public class BubblePictures: NSObject {
     public weak var delegate: BPDelegate?
     
     @objc internal func rotated() {
-        self.collectionView.delegate = nil
-        self.collectionView.dataSource = nil
+        self.collectionView?.delegate = nil
+        self.collectionView?.dataSource = nil
         
         self.truncateCells(configFiles: configFiles)
         self.assignAlignment()
         
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
-        self.collectionView.reloadData()
+        self.collectionView?.delegate = self
+        self.collectionView?.dataSource = self
+        self.collectionView?.reloadData()
     }
     
     private func setCollectionViewAlignment() {
         if layoutConfigurator.direction == .rightToLeft {
-            collectionView.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
+            collectionView?.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
         } else {
-            collectionView.transform = .identity
+            collectionView?.transform = .identity
         }
     }
     
@@ -58,7 +58,7 @@ public class BubblePictures: NSObject {
     
     private func registerCells() {
         let nib = UINib(nibName: BPCollectionViewCell.className, bundle: BubblePictures.bubblePicturesBundle)
-        self.collectionView.register(nib, forCellWithReuseIdentifier: BPCollectionViewCell.className)
+        self.collectionView?.register(nib, forCellWithReuseIdentifier: BPCollectionViewCell.className)
     }
     
     private func truncateCells(configFiles: [BPCellConfigFile]) {
@@ -84,40 +84,45 @@ public class BubblePictures: NSObject {
     }
     
     private func assignAlignment() {
-        let bubblesTotalWidth = (CGFloat(min(maxNumberOfBubbles, configFiles.count)) * (self.collectionView.bounds.height - negativeInsetWidth)) + negativeInsetWidth
-        let emptyWidthSpace = self.collectionView.bounds.width - bubblesTotalWidth - 0.01
-        let emptyWidthSpaceDivided = ((self.collectionView.bounds.width - bubblesTotalWidth) / 2.0) - 0.01
+        guard let collectionView = self.collectionView else { return }
+        
+        let bubblesTotalWidth = (CGFloat(min(maxNumberOfBubbles, configFiles.count)) * (collectionView.bounds.height - negativeInsetWidth)) + negativeInsetWidth
+        let emptyWidthSpace = collectionView.bounds.width - bubblesTotalWidth - 0.01
+        let emptyWidthSpaceDivided = ((collectionView.bounds.width - bubblesTotalWidth) / 2.0) - 0.01
         if emptyWidthSpace < 0.0 { return }
         
         switch layoutConfigurator.alignment {
         case .center:
-            self.collectionView.contentInset = UIEdgeInsets(top: 0.0, left: emptyWidthSpaceDivided, bottom: 0.0, right: emptyWidthSpaceDivided)
+            collectionView.contentInset = UIEdgeInsets(top: 0.0, left: emptyWidthSpaceDivided, bottom: 0.0, right: emptyWidthSpaceDivided)
         case .left:
             switch layoutConfigurator.direction {
             case .leftToRight:
-                self.collectionView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: emptyWidthSpace)
+                collectionView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: emptyWidthSpace)
             case .rightToLeft:
-                self.collectionView.contentInset = UIEdgeInsets(top: 0.0, left: emptyWidthSpace, bottom: 0.0, right: 0.0)
+                collectionView.contentInset = UIEdgeInsets(top: 0.0, left: emptyWidthSpace, bottom: 0.0, right: 0.0)
             }
         case .right:
             switch layoutConfigurator.direction {
             case .leftToRight:
-                self.collectionView.contentInset = UIEdgeInsets(top: 0.0, left: emptyWidthSpace, bottom: 0.0, right: 0.0)
+                collectionView.contentInset = UIEdgeInsets(top: 0.0, left: emptyWidthSpace, bottom: 0.0, right: 0.0)
             case .rightToLeft:
-                self.collectionView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: emptyWidthSpace)
+                collectionView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: emptyWidthSpace)
             }
         }
     }
     
-    fileprivate weak var collectionView: UICollectionView!
+    fileprivate weak var collectionView: UICollectionView?
     fileprivate var configFiles: [BPCellConfigFile]
     fileprivate var configFilesTruncated: [BPCellConfigFile] = []
     fileprivate var layoutConfigurator: BPLayoutConfigurator
     fileprivate var negativeInsetWidth: CGFloat {
-        return layoutConfigurator.distanceInterBubbles ?? (self.collectionView.bounds.height / 3.0)
+        let height = self.collectionView?.bounds.height ?? 0.0
+        return layoutConfigurator.distanceInterBubbles ?? (height / 3.0)
     }
     fileprivate var maxNumberOfBubbles: Int {
-        let calculationMaxNumberOfBubbles = Int(floor((self.collectionView.bounds.width - negativeInsetWidth) / (self.collectionView.bounds.height - negativeInsetWidth)))
+        let width = self.collectionView?.bounds.width ?? 0.0
+        let height = self.collectionView?.bounds.height ?? 0.0
+        let calculationMaxNumberOfBubbles = Int(floor((width - negativeInsetWidth) / (height - negativeInsetWidth)))
         guard let maxNumberPreferredByUser = layoutConfigurator.maxNumberOfBubbles else {
             return calculationMaxNumberOfBubbles
         }
