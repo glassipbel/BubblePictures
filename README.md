@@ -1,10 +1,9 @@
-<p align="center">
-  ![Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/logo2.png)
 
-  ![Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/m4.png)
+![Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/logo2.png)
 
-  ![Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/m3.png)
-</p>
+![Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/m4.png)
+
+![Bubble Pictures](https://raw.githubusercontent.com/kbelter/BubblePictures/master/Screenshots/m3.png)
 
 (Pictures from [Luv.it](http://luv.it) App using Bubble Pictures)
 
