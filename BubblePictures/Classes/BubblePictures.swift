@@ -30,7 +30,7 @@ public class BubblePictures: NSObject {
         NotificationCenter.default.removeObserver(self)
     }
     
-    public var delegate: BPDelegate?
+    public weak var delegate: BPDelegate?
     
     @objc internal func rotated() {
         self.collectionView.delegate = nil

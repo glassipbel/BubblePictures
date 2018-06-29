@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BPCollectionViewCell: UICollectionViewCell {
+final class BPCollectionViewCell: UICollectionViewCell {
     
     class var className: String { return "BPCollectionViewCell" }
     

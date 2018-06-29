@@ -1,5 +1,5 @@
 PODS:
-  - BubblePictures (1.1.3):
+  - BubblePictures (1.1.4):
     - SDWebImage
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
@@ -8,14 +8,18 @@ PODS:
 DEPENDENCIES:
   - BubblePictures (from `../`)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SDWebImage
+
 EXTERNAL SOURCES:
   BubblePictures:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  BubblePictures: 0afc27689246c964078c1fdcaf141be504419c8d
+  BubblePictures: 46a6227d951f4e46094a10e54fbbbdefd84b48f9
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
 
 PODFILE CHECKSUM: 03dce109f13997fe0e10f9926001ac1dafef3399
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.2
