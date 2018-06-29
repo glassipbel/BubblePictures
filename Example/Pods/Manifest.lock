@@ -1,5 +1,5 @@
 PODS:
-  - BubblePictures (1.1.4):
+  - BubblePictures (1.1.5):
     - SDWebImage
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
@@ -17,9 +17,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BubblePictures: 46a6227d951f4e46094a10e54fbbbdefd84b48f9
+  BubblePictures: 80ede658bfedc2becc6f3f5a2685fb6d232c194b
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
 
-PODFILE CHECKSUM: 03dce109f13997fe0e10f9926001ac1dafef3399
+PODFILE CHECKSUM: 02208cc61d3dc992703211a50fcd1770f63e8932
 
 COCOAPODS: 1.5.2
