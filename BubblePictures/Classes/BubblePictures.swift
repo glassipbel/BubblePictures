@@ -53,7 +53,7 @@ public class BubblePictures: NSObject {
     }
     
     private func registerForNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     
     private func registerCells() {

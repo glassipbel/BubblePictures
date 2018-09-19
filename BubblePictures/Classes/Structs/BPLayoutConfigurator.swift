@@ -17,7 +17,7 @@ public struct BPLayoutConfigurator {
     var maxNumberOfBubbles: Int?
     var numberForTruncatedCell: Int?
     var widthForBubbleBorders: CGFloat
-    var bubbleImageContentMode: UIViewContentMode
+    var bubbleImageContentMode: UIView.ContentMode
     var distanceInterBubbles: CGFloat?
     var direction: BPDirection
     var alignment: BPAlignment
@@ -31,7 +31,7 @@ public struct BPLayoutConfigurator {
         maxNumberOfBubbles: Int? = nil,
         numberForTruncatedCell: Int? = nil,
         widthForBubbleBorders: CGFloat = 1.0,
-        bubbleImageContentMode: UIViewContentMode = .scaleAspectFill,
+        bubbleImageContentMode: UIView.ContentMode = .scaleAspectFill,
         distanceInterBubbles: CGFloat? = nil,
         direction: BPDirection = .leftToRight,
         alignment: BPAlignment = .left) {

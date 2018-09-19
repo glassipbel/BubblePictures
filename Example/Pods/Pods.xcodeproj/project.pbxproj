@@ -800,6 +800,39 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		12A962E4A2CD5CBE13F429E5FCC6034A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AECED10984D3B87B3BF5D5DD4F78217 /* BubblePictures.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BubblePictures/BubblePictures-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BubblePictures/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BubblePictures/BubblePictures.modulemap";
+				PRODUCT_MODULE_NAME = BubblePictures;
+				PRODUCT_NAME = BubblePictures;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		199D972A13F2B4C56847F7A89CCA83BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -863,38 +896,6 @@
 			};
 			name = Debug;
 		};
-		2085CE0F94CB06781C6EEE6E1A2F79FA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AECED10984D3B87B3BF5D5DD4F78217 /* BubblePictures.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BubblePictures/BubblePictures-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BubblePictures/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BubblePictures/BubblePictures.modulemap";
-				PRODUCT_MODULE_NAME = BubblePictures;
-				PRODUCT_NAME = BubblePictures;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		303C4144BA988B9FCC59FCA9B822E07A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 48FC82246584091169FAC7ED7C17685E /* Pods-BubblePictures_Example.release.xcconfig */;
@@ -930,70 +931,6 @@
 			};
 			name = Release;
 		};
-		4D7D26E65D90C4114D98AF72F3CB0494 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AECED10984D3B87B3BF5D5DD4F78217 /* BubblePictures.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BubblePictures/BubblePictures-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BubblePictures/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BubblePictures/BubblePictures.modulemap";
-				PRODUCT_MODULE_NAME = BubblePictures;
-				PRODUCT_NAME = BubblePictures;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5150E56A71DD800F3FEC74DE314980D1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFC3DC18666EE9E6763834DC3D5C2C64 /* SDWebImage.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SDWebImage/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SDWebImage/SDWebImage.modulemap";
-				PRODUCT_MODULE_NAME = SDWebImage;
-				PRODUCT_NAME = SDWebImage;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		702485854B4E369B9FCFAC710DF643BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6AECED10984D3B87B3BF5D5DD4F78217 /* BubblePictures.xcconfig */;
@@ -1025,6 +962,38 @@
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
+		};
+		7681B64F4C715B422D28A935BC1FE091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFC3DC18666EE9E6763834DC3D5C2C64 /* SDWebImage.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SDWebImage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SDWebImage/SDWebImage.modulemap";
+				PRODUCT_MODULE_NAME = SDWebImage;
+				PRODUCT_NAME = SDWebImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		78B1FDF777AB04E04DD06F6EF00EE829 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1061,7 +1030,39 @@
 			};
 			name = Debug;
 		};
-		CE42ED8E31D5DED8919F4EE08069C6FA /* Release */ = {
+		78D139683CC0D449DF3758C9A5BF070D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AECED10984D3B87B3BF5D5DD4F78217 /* BubblePictures.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BubblePictures/BubblePictures-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BubblePictures/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BubblePictures/BubblePictures.modulemap";
+				PRODUCT_MODULE_NAME = BubblePictures;
+				PRODUCT_NAME = BubblePictures;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		95C56DA5B5A9B3E3ABD809932D6820AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FFC3DC18666EE9E6763834DC3D5C2C64 /* SDWebImage.xcconfig */;
 			buildSettings = {
@@ -1085,13 +1086,12 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		FDB2FC4A1E5891381CD9D922145497F1 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1157,8 +1157,8 @@
 		07E45C729A6536506C33B25FC016EF88 /* Build configuration list for PBXNativeTarget "SDWebImage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5150E56A71DD800F3FEC74DE314980D1 /* Debug */,
-				CE42ED8E31D5DED8919F4EE08069C6FA /* Release */,
+				95C56DA5B5A9B3E3ABD809932D6820AB /* Debug */,
+				7681B64F4C715B422D28A935BC1FE091 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1193,8 +1193,8 @@
 		9A9C412129E1E6D8B774C172F620FE83 /* Build configuration list for PBXNativeTarget "BubblePictures" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2085CE0F94CB06781C6EEE6E1A2F79FA /* Debug */,
-				4D7D26E65D90C4114D98AF72F3CB0494 /* Release */,
+				78D139683CC0D449DF3758C9A5BF070D /* Debug */,
+				12A962E4A2CD5CBE13F429E5FCC6034A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
