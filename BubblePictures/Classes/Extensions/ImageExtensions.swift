@@ -8,6 +8,7 @@
 
 import Foundation
 import SDWebImage
+import UIKit
 
 extension UIImageView {
     func setImageWithURLAnimated(_ anURL:URL, completitionBlock:(() -> ())? = nil) {
