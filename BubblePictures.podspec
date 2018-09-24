@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'BubblePictures'
-  s.version          = '1.1.7'
+  s.version          = '2.0.0'
   s.summary          = 'Framework for showing bubbles like pictures.'
   s.description      = 'Framework for showing bubbles like pictures inside a collection View, the frameworks handles everything for you, you just need to pass the pictures with the titles and thats it.'
   s.homepage         = 'https://github.com/kbelter/BubblePictures'
@@ -8,10 +8,12 @@ Pod::Spec.new do |s|
   s.author           = { 'Kevin Belter' => 'kevin.belter@outlook.com' }
   s.source           = { :git => 'https://github.com/kbelter/BubblePictures.git', :tag => s.version.to_s }
   s.ios.deployment_target = '9.0'
+  s.swift_version = '4.2'
   s.source_files = 'BubblePictures/Classes/**/*'
   s.resource_bundles = {
      'BubblePictures' => ['BubblePictures/Assets/**/*']
     }
   s.frameworks = 'UIKit'
   s.dependency 'SDWebImage'
+  
 end
