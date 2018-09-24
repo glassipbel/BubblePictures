@@ -7,9 +7,6 @@
  */
 
 #import "SDWebImageCompat.h"
-
-#if SD_UIKIT || SD_MAC
-
 #import "SDWebImageManager.h"
 
 /**
@@ -30,8 +27,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
  
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier]
-                 autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier];
     }
  
     // Here we use the provided sd_setImageWithURL: method to load the web image
@@ -195,5 +191,3 @@
 #endif
 
 @end
-
-#endif

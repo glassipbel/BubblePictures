@@ -7,16 +7,13 @@
  */
 
 #import "SDWebImageCompat.h"
-
-#if SD_UIKIT || SD_MAC
-
 #import "SDWebImageManager.h"
 #import "SDWebImageTransition.h"
 
 /**
  A Dispatch group to maintain setImageBlock and completionBlock. This key should be used only internally and may be changed in the future. (dispatch_group_t)
  */
-FOUNDATION_EXPORT NSString * _Nonnull const SDWebImageInternalSetImageGroupKey;
+FOUNDATION_EXPORT NSString * _Nonnull const SDWebImageInternalSetImageGroupKey __deprecated_msg("Key Deprecated. Does nothing. This key should be used only internally");
 /**
  A SDWebImageManager instance to control the image download and cache process using in UIImageView+WebCache category and likes. If not provided, use the shared manager (SDWebImageManager)
  */
@@ -105,6 +102,8 @@ typedef void(^SDSetImageBlock)(UIImage * _Nullable image, NSData * _Nullable ima
  */
 - (void)sd_cancelCurrentImageLoad;
 
+#if SD_UIKIT || SD_MAC
+
 #pragma mark - Image Transition
 
 /**
@@ -135,6 +134,6 @@ typedef void(^SDSetImageBlock)(UIImage * _Nullable image, NSData * _Nullable ima
 
 #endif
 
-@end
-
 #endif
+
+@end
