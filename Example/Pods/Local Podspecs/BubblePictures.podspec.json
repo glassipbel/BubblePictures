@@ -1,6 +1,6 @@
 {
   "name": "BubblePictures",
-  "version": "2.0.1",
+  "version": "2.0.0",
   "summary": "Framework for showing bubbles like pictures.",
   "description": "Framework for showing bubbles like pictures inside a collection View, the frameworks handles everything for you, you just need to pass the pictures with the titles and thats it.",
   "homepage": "https://github.com/kbelter/BubblePictures",
@@ -13,12 +13,11 @@
   },
   "source": {
     "git": "https://github.com/kbelter/BubblePictures.git",
-    "tag": "2.0.1"
+    "tag": "2.0.0"
   },
   "platforms": {
     "ios": "9.0"
   },
-  "swift_version": "4.2",
   "source_files": "BubblePictures/Classes/**/*",
   "resource_bundles": {
     "BubblePictures": [
@@ -30,5 +29,6 @@
     "SDWebImage": [
 
     ]
-  }
+  },
+  "swift_version": "4.2"
 }

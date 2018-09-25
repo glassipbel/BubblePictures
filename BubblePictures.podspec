@@ -14,5 +14,6 @@ Pod::Spec.new do |s|
     }
   s.frameworks = 'UIKit'
   s.dependency 'SDWebImage'
+  s.swift_version = '4.2'
   
 end
