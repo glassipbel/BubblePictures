@@ -184,7 +184,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BubblePictures_Example/Pods-BubblePictures_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BubblePictures_Example/Pods-BubblePictures_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BubblePictures/BubblePictures.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
@@ -195,7 +195,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BubblePictures_Example/Pods-BubblePictures_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BubblePictures_Example/Pods-BubblePictures_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7B1D1B37D5B167CEA8429CE7 /* [CP] Check Pods Manifest.lock */ = {
