@@ -44,7 +44,7 @@ final class BPCollectionViewCell: UICollectionViewCell {
         
         viewWhiteBorders.layer.borderWidth = layoutConfigurator.widthForBubbleBorders
         viewBackgroundWidthConstraint.constant = layoutConfigurator.widthForBubbleBorders * -2
-        lblNameCenterXConstraint.constant = isTruncatedCell ? -2 : -4
+        lblNameCenterXConstraint.constant = isTruncatedCell ? 0 : -4
     }
     
     private func configureImage(imageType: BPImageType, title: String, layoutConfigurator: BPLayoutConfigurator) {
