@@ -82,7 +82,7 @@ The layoutConfigurator is an struct that has these values:
 - colorForBubbleTitles: This is the color of the bubble titles.
 - maxCharactersForBubbleTitles: This is the max lenght of characters for every bubble title.
 - maxNumberOfBubbles: You can add this property if you want to hardcode the number of bubbles that will be shown. (If the number is larger than the whole screen, then it will show the maximum number of bubbles that fits the screen)
-- numberForTruncatedCell: If you don't want BubblePictures to calculate the number in the truncated cell, then you can assign one yourself.
+- displayForTruncatedCell: If you don't want BubblePictures to calculate the number in the truncated cell, then you can assign one yourself.
 - widthForBubbleBorders: The border width for the bubbles.
 - bubbleImageContentMode: The content mode for the image in the bubbles.
 - distanceInterBubbles: The distance between each bubble, the default value is the size of the bubble divided by 3.
@@ -100,6 +100,16 @@ maxCharactersForBubbleTitles: 3)
 and then inject it in the initializer:
 
 bubblePictures = BubblePictures(collectionView: {{YOUR_COLLECTION_VIEW}}, configFiles: {{YOUR_BPCellConfigFiles_ARRAY}}, layoutConfigurator: layoutConfigurator)
+
+## Updates History
+
+*Version 2.1.3
+- Change the property in the Layout Configurator called 'numberForTruncatedCell' to 'displayForTruncatedCell'. This property now is an Enum that supports:
+  - Number (The only previous available value)
+  - Text
+  - Image Type (URL, Image or Color)
+
+Thanks to [Valgrin](https://github.com/Valgrin) for creating a PR and adding this feature :)
 
 ## Author
 

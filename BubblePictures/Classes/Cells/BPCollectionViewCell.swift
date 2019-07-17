@@ -22,13 +22,13 @@ final class BPCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         self.layoutIfNeeded()
-        
+
         viewWhiteBorders.layer.masksToBounds = true
         viewWhiteBorders.layer.cornerRadius = viewWhiteBorders.bounds.height / 2.0
-        
+
         imgBackground.layer.masksToBounds = true
         imgBackground.layer.cornerRadius = imgBackground.bounds.height / 2.0
-        
+
         viewBackground.layer.masksToBounds = true
         viewBackground.layer.cornerRadius = viewBackground.bounds.height / 2.0
     }
@@ -44,7 +44,16 @@ final class BPCollectionViewCell: UICollectionViewCell {
         
         viewWhiteBorders.layer.borderWidth = layoutConfigurator.widthForBubbleBorders
         viewBackgroundWidthConstraint.constant = layoutConfigurator.widthForBubbleBorders * -2
-        lblNameCenterXConstraint.constant = isTruncatedCell ? -2 : -4
+        var nameCenterXConstant: CGFloat = -4
+        if isTruncatedCell {
+            switch layoutConfigurator.displayForTruncatedCell {
+            case .none, .some(.number):
+                nameCenterXConstant = -2
+            case .some(.image), .some(.text):
+                nameCenterXConstant = 0
+            }
+        }
+        lblNameCenterXConstraint.constant = nameCenterXConstant
     }
     
     private func configureImage(imageType: BPImageType, title: String, layoutConfigurator: BPLayoutConfigurator) {

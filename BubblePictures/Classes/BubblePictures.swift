@@ -72,10 +72,29 @@ public class BubblePictures: NSObject {
         for (index, configFile) in configFiles.enumerated() {
             if index + 1 == maxNumberOfBubbles {
                 let remainingCells = (configFiles.count + 1) - maxNumberOfBubbles
-                let truncatedCell = BPCellConfigFile(
-                    imageType: BPImageType.color(layoutConfigurator.backgroundColorForTruncatedBubble),
-                    title: "+\(layoutConfigurator.numberForTruncatedCell ?? remainingCells)"
-                )
+                let truncatedCell: BPCellConfigFile
+                switch layoutConfigurator.displayForTruncatedCell {
+                case .none:
+                    truncatedCell = BPCellConfigFile(
+                        imageType: BPImageType.color(layoutConfigurator.backgroundColorForTruncatedBubble),
+                        title: "+\(remainingCells)"
+                    )
+                case .some(.image(let imageType)):
+                    truncatedCell = BPCellConfigFile(
+                        imageType: imageType,
+                        title: ""
+                    )
+                case .some(.number(let number)):
+                    truncatedCell = BPCellConfigFile(
+                        imageType: BPImageType.color(layoutConfigurator.backgroundColorForTruncatedBubble),
+                        title: "+\(number)"
+                    )
+                case .some(.text(let text)):
+                    truncatedCell = BPCellConfigFile(
+                        imageType: BPImageType.color(layoutConfigurator.backgroundColorForTruncatedBubble),
+                        title: text
+                    )
+                }
                 configFilesTruncated.append(truncatedCell)
                 break
             }
