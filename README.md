@@ -103,8 +103,8 @@ bubblePictures = BubblePictures(collectionView: {{YOUR_COLLECTION_VIEW}}, config
 
 ## Updates History
 
-*Version 2.1.3
-- Change the property in the Layout Configurator called 'numberForTruncatedCell' to 'displayForTruncatedCell'. This property now is an Enum that supports:
+Version 2.1.3
+- Changed the property in the Layout Configurator called 'numberForTruncatedCell' to 'displayForTruncatedCell'. This property now is an Enum that supports:
   - Number (The only previous available value)
   - Text
   - Image Type (URL, Image or Color)
