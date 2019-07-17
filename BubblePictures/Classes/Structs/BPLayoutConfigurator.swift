@@ -15,18 +15,12 @@ public struct BPLayoutConfigurator {
     var colorForBubbleTitles: UIColor
     var maxCharactersForBubbleTitles: Int
     var maxNumberOfBubbles: Int?
-    var displayForTruncatedCell: TruncatedCellDisplay?
+    var displayForTruncatedCell: BPTruncatedCellDisplay?
     var widthForBubbleBorders: CGFloat
     var bubbleImageContentMode: UIView.ContentMode
     var distanceInterBubbles: CGFloat?
     var direction: BPDirection
     var alignment: BPAlignment
-
-    public enum TruncatedCellDisplay {
-        case text(String)
-        case image(UIImage)
-        case number(Int)
-    }
     
     public init(
         backgroundColorForTruncatedBubble: UIColor = UIColor.gray,
@@ -35,7 +29,7 @@ public struct BPLayoutConfigurator {
         colorForBubbleTitles: UIColor = UIColor.white,
         maxCharactersForBubbleTitles: Int = 3,
         maxNumberOfBubbles: Int? = nil,
-        displayForTruncatedCell: TruncatedCellDisplay? = nil,
+        displayForTruncatedCell: BPTruncatedCellDisplay? = nil,
         widthForBubbleBorders: CGFloat = 1.0,
         bubbleImageContentMode: UIView.ContentMode = .scaleAspectFill,
         distanceInterBubbles: CGFloat? = nil,

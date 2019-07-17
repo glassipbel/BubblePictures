@@ -79,9 +79,9 @@ public class BubblePictures: NSObject {
                         imageType: BPImageType.color(layoutConfigurator.backgroundColorForTruncatedBubble),
                         title: "+\(remainingCells)"
                     )
-                case .some(.image(let image)):
+                case .some(.image(let imageType)):
                     truncatedCell = BPCellConfigFile(
-                        imageType: .image(image),
+                        imageType: imageType,
                         title: ""
                     )
                 case .some(.number(let number)):
